@@ -7,6 +7,8 @@
 
 ## How to run
 
+Install deps by running `yarn`
+
 To see matching output in the console, run `yarn start`
 To run tests, run `yarn test`
 
