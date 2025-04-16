@@ -1,0 +1,30 @@
+{
+  "name": "bn-recommendation-challenge",
+  "version": "1.0.0",
+  "description": "A simple script to match Bright Network members to their ideal job",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "start:prod": "node build/src/index.js",
+    "test": "jest --detectOpenHandles --forceExit",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix"
+  },
+  "dependencies": {
+    "fuse.js": "^7.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.7.5",
+    "gts": "^6.0.2",
+    "jest": "^29.7.0",
+    "msw": "^2.7.4",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.6.3"
+  }
+}

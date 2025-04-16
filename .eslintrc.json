@@ -1,0 +1,14 @@
+{
+  "extends": "./node_modules/gts/",
+  "overrides": [
+    {
+      "files": ["test/**/*.ts"],
+      "env": {
+        "jest": true
+      },
+      "rules": {
+        "n/no-unpublished-import": "off"
+      }
+    }
+  ]
+}
