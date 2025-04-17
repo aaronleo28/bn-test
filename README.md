@@ -23,6 +23,14 @@ Alternatively, I'd have to leverage some NLP lib and try get a more sophisticate
 
 With this current mechanism, there is no threshold set on the string similarity score, this was intentional as I think it's better to have some unexpected results rather than no results at all.
 
+There would be a big issue of efficiency with this kind of approach in a real-world setting too. We're getting all members and all jobs, loading them into memory, then looping over them all with a nested loop (for each member we search all jobs).
+
+If we were running this solution at scale we'd quickly run into memory issues.
+
+In a real-world setting this process could be ran as an ETL job on a regular interval, using something like AWS Glue.
+
+Alternatively, we could consider an event-based approach where we look for jobs when a member is created or vice versa, but I'd imagine this would lead to a lot of unnecessary computation
+
 ## Choices Made
 
 **Set up TS project using GTS** [Google Typescript Style](https://github.com/google/gts) is a quick and eaasy TS style guide and formatting config.
